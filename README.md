@@ -13,13 +13,26 @@ All the test sets for model evaluation.
 The selected 26 RF classifiers for ensemble.
 
 ## DATASETS
-The Supplementary Datasets (S1-S8). Due to the limited storage of Git LFS Data, some datasets with large file size are moved to our OneDrive, the download link is: https://mailsysueducn-my.sharepoint.com/:f:/g/personal/limiaoxin_mail_sysu_edu_cn/EjKo3l_HQcZEjHCeqJ9mDREBrtoJSVJjhlPjA1l9OGQGZg?e=VWySpZ.
+The Supplementary Datasets (S1-S8):
 
-Dataset_S7-CodingDIScores
-The compressed file of Dataset S7-the Digenic interaction scores for each two coding genes across the whole genome. The compressed file is also moved to our OneDrive (https://mailsysueducn-my.sharepoint.com/:f:/g/personal/limiaoxin_mail_sysu_edu_cn/EjKo3l_HQcZEjHCeqJ9mDREBrtoJSVJjhlPjA1l9OGQGZg?e=VWySpZ). There are two files in the directory after decompressing the (Dataset_S7-CodingDIScores.zip) file, including Coding_predict_fixed.txt.b and Coding_predict_fixed.txt.d for decoding the compressed file.
+Due to the limited storage of Git LFS Data, some datasets with large file size are moved to our OneDrive and Google Driver, see details in the cooresponding README.md file.
+
+Dataset_S7-CodingDIScores:
+
+The compressed file of Dataset S7-the Digenic interaction scores for each two coding genes across the whole genome. The compressed file is also moved to our OneDrive and  Google Driver, see details in the cooresponding README.md file. There are two files in the directory after decompressing the (Dataset_S7-CodingDIScores.zip) file, including Coding_predict_fixed.txt.b and Coding_predict_fixed.txt.d for decoding the compressed file.
+
+
+
+Besides, for a quick download of our final database and the high-efficiency java package, `wget` is also available:
+
+```bash
+wget http://pmglab.top/diep/Coding_predict_fixed.tar.gz
+wget http://pmglab.top/diep/transfer.jar
+tar -zxvf Coding_predict_fixed.tar.gz
+```
 
 ## TABLES
-The Supplementary Tables (S5 and S6).
+The Supplementary Tables (S4-S9).
 
 ## CODES
 1_DownSampling.py  
@@ -52,11 +65,10 @@ Users need to download the required files from the web page, including the resou
 5.Searching  
 Search the digenic interaction potential score for specific a gene pair:  
 ```java -jar transfer.jar --read Coding_predict_fixed.txt -gn AGRN TAS1R3``` 
-  
+
 Search the digenic interaction potential scores with a gene list:  
 ```java -jar transfer.jar --read Coding_predict_fixed.txt -gn AGRN TAS1R3 ARHGEF16 CCDC27 CHD5``` 
-  
+
 Set the column name:  
 ```java -jar transfer.jar --read Coding_predict_fixed.txt -gn AGRN TAS1R3 --header Ga Gb Score``` 
-
 
